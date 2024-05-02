@@ -4,36 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Number Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<center>
     <h1>Guess the Number from 1 to 10</h1>
     <input type="number" id="num">
     <button onclick = "check ()">Check</button>
     <p id="command">You are wrong/right</p>
-    <p id="totscore">score: 10</p>
+    <p id="totscore">Score: 10</p>
     <button type="button" onclick="window.location.reload()">New Game</button>
-    <script>
-        let totscore = 10
-        let num = document.getElementById('num')
-        let command = document.getElementById('command')
-        let score = document.getElementById('totscore')
-        function check ()
-        {
-            let random = Math.floor(Math.random()*10)+1
-            if(num.value == random)
-            {
-                command.innerHTML = "You are Right"
-                alert("YOU WON....")
-            }
-            else
-            {
-                command.innerHTML = "You are Wrong"
-                totscore = totscore-1
-                score.innerHTML = "score: "+totscore
-                
-
-            }
-        }
-    </script>
+</center>
+<script src="script.js"></script>
 </body>
 </html>
